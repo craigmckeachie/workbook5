@@ -1,3 +1,5 @@
+"use strict";
+
 let courses = [
   {
     CourseId: "PROG100",
@@ -51,9 +53,24 @@ let course = courses.find(searchCourses);
 // and look the start date in the course
 console.log(`${searchCourseId} starts on ${course.StartDate}`);
 
+console.log("________________________________");
 
+function searchCourses(course) {
+  return course.CourseId === "PROJ500";
+}
 
+let course1 = courses.find(searchCourses);
+console.log(`${course1.CourseId} is ${course1.Title}`);
 
-// What is the title of the PROJ500 course?
 // What are the titles of the courses that cost $50 or less?
+
 // What classes meet in "Classroom 1"?
+
+console.log("________________________________");
+
+function searchCourses(course) {
+  return course.Location === "Classroom 1";
+}
+
+let matchingCourses = courses.filter(searchCourses);
+console.log(matchingCourses);
