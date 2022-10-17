@@ -63,6 +63,16 @@ let course1 = courses.find(searchCourses);
 console.log(`${course1.CourseId} is ${course1.Title}`);
 
 // What are the titles of the courses that cost $50 or less?
+console.log("________________________________");
+
+function searchCourses(course) {
+  return course.Price <= 50;
+}
+
+let cheapCourses = courses.filter(searchCourses);
+console.log(cheapCourses);
+
+
 
 // What classes meet in "Classroom 1"?
 
