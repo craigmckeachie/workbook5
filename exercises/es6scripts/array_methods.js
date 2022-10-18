@@ -17,7 +17,7 @@ function displayName(cartItemName) {
   console.log(cartItemName);
 }
 
-let itemNames = cart.map(getItemName);
+let itemNames = cart.map(getItemName).sort();
 itemNames.forEach(displayName);
 
 // sum cart
