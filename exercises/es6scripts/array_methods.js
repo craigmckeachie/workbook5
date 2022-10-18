@@ -8,15 +8,17 @@ let cart = [
   { item: "Apples", price: 0.66, quantity: 6 },
 ];
 
-function getItemName(object) {
-  return object.item;
+//display item name
+function getItemName(cartItem) {
+  return cartItem.item;
 }
 
-function displayName(itemName) {
-  console.log(itemName);
+function displayName(cartItemName) {
+  console.log(cartItemName);
 }
 
 let itemNames = cart.map(getItemName);
-
-
 itemNames.forEach(displayName);
+
+
+// 
