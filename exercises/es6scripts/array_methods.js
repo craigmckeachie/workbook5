@@ -20,5 +20,10 @@ function displayName(cartItemName) {
 let itemNames = cart.map(getItemName);
 itemNames.forEach(displayName);
 
+// sum cart
+function addCartItem(currentTotal, cartItem) {
+  return currentTotal + cartItem.price * cartItem.quantity;
+}
 
-// 
+const total = cart.reduce(addCartItem, 0);
+console.log(total);
