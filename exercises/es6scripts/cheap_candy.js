@@ -23,3 +23,11 @@ let mmCandies1 = products.filter((product) => {
 let mmCandies2 = products.filter((p) => p.product.includes("M&Ms"));
 console.log(mmCandies1);
 console.log(mmCandies2);
+
+let swedishFishCandies = products.filter((p) =>
+  p.product.includes("Swedish Fish")
+);
+console.log(swedishFishCandies.length != 0);
+
+let swedishFishCandy = products.find((p) => p.product.includes("Swedish FishSticks"));
+console.log(swedishFishCandy != null);
