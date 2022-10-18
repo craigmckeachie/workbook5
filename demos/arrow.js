@@ -8,9 +8,15 @@ let sum = numbers.reduce(
   (currentTotal, arrayValue) => currentTotal + arrayValue,
   0
 );
+
+//If function is more than one line of code, then return is needed again
+// let sum = numbers.reduce((currentTotal, arrayValue) => {
+//   console.log(currentTotal);
+//   return currentTotal + arrayValue;
+// }, 0);
+
 // sum contains 475
 console.log(sum);
-
 
 // 1. Replace `function` on left of parameter list with `=>` on the right side of the parameter list.
 // 2. If the function is only one line you can:
