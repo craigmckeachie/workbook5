@@ -10,18 +10,16 @@
 
 <body>
 
-    <!-- <button id="googleButton" onclick="openGoogle();">Google</button> -->
     <button id="googleButton">Google</button>
     <button id="w3schoolsButton">W3Schools</button>
     <button id="imagesButton">Images</button>
     <script>
-        window.onload = init;
 
-        function init() {
+
+
+        window.onload = () => {
             const googleButton = document.getElementById("googleButton");
-            // const googleButton = {onclick: openGoogle, id: "googleButton"};
-
-            googleButton.onclick = openGoogle
+            googleButton.onclick = openGoogle;
         }
 
         function openGoogle() {
