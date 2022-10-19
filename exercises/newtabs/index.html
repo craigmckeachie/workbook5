@@ -11,13 +11,19 @@
 <body>
 
     <button id="googleButton">Google</button>
-    <button id="w3schoolsButton">W3Schools</button>
+    <button id="w3SchoolsButton">W3Schools</button>
     <button id="imagesButton">Images</button>
     <script>
 
         window.onload = () => {
             const googleButton = document.getElementById("googleButton");
-            googleButton.onclick = () => window.open("https://www.google.com/")
+            googleButton.onclick = () => window.open("https://www.google.com/");
+
+            const w3SchoolsButton = document.getElementById("w3SchoolsButton");
+            w3SchoolsButton.onclick = () => window.open("https://www.w3schools.com/js/");
+
+            const imagesButton = document.getElementById("imagesButton");
+            imagesButton.onclick = () => window.open("images.html", "_self");
         }
 
     </script>
