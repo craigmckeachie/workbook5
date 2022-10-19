@@ -15,15 +15,9 @@
     <button id="imagesButton">Images</button>
     <script>
 
-
-
         window.onload = () => {
             const googleButton = document.getElementById("googleButton");
-            googleButton.onclick = openGoogle;
-        }
-
-        function openGoogle() {
-            window.open("https://www.google.com/")
+            googleButton.onclick = () => window.open("https://www.google.com/")
         }
 
     </script>
