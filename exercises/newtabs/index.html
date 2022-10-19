@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+
+    <!-- <button id="googleButton" onclick="openGoogle();">Google</button> -->
+    <button id="googleButton">Google</button>
+    <button id="w3schoolsButton">W3Schools</button>
+    <button id="imagesButton">Images</button>
+    <script>
+        window.onload = init;
+
+        function init() {
+            const googleButton = document.getElementById("googleButton");
+            // const googleButton = {onclick: openGoogle, id: "googleButton"};
+
+            googleButton.onclick = openGoogle
+        }
+
+        function openGoogle() {
+            window.open("https://www.google.com/")
+        }
+
+    </script>
+</body>
+
+
+</html>
