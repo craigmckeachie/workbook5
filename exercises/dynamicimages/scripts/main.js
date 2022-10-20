@@ -27,7 +27,12 @@ function addImage() {
   //   });
 
   let imageFile = imageFiles.find((f) => f.name === selectedValue);
-  console.log(imageFile.path);
+  let img = document.createElement("img");
+  img.src = imageFile.path;
+  img.alt = imageFile.name;
+
+  const imagesDiv = document.querySelector("#imagesDiv");
+  imagesDiv.appendChild(img);
 }
 
 window.onload = () => {
