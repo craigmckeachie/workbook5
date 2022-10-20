@@ -23,5 +23,12 @@ function loadWinningTicketsTable() {
     "winningTicketsTblBody"
   );
 
-  
+  for (const ticket of winningTickets) {
+    buildTicketRow(winningTicketsTblBody, ticket);
+  }
+}
+
+function buildTicketRow(tableBody, ticket) {
+  console.log(tableBody);
+  console.log(ticket);
 }
