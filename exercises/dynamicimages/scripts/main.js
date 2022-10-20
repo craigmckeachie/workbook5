@@ -1,9 +1,9 @@
 "use strict";
 
 let imageFiles = [
-  { path: "https://loremflickr.com/320/240/guitar?lock=1", name: "Electric" },
-  { path: "https://loremflickr.com/320/240/guitar?lock=2", name: "Acoustic" },
-  { path: "https://loremflickr.com/320/240/guitar?lock=3", name: "Amplifier" },
+  { path: "https://loremflickr.com/320/240/guitar?lock=3", name: "Electric" },
+  { path: "https://loremflickr.com/320/240/guitar?lock=1", name: "Acoustic" },
+  { path: "https://loremflickr.com/320/240/guitar?lock=5", name: "Amplifier" },
 ];
 
 const guitarList = document.getElementById("guitarList");
@@ -17,14 +17,6 @@ function loadGuitarList() {
 
 function addImage() {
   const selectedValue = guitarList.value;
-
-  //   const imagePath = null;
-  //   imageFiles.forEach((imageFile) => {
-  //     if (imageFile.name === selectedValue) {
-  //       imagePath = imageFile.path;
-  //       return;
-  //     }
-  //   });
 
   let imageFile = imageFiles.find((f) => f.name === selectedValue);
   let img = document.createElement("img");
