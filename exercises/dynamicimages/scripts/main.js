@@ -1,9 +1,9 @@
 "use strict";
 
 let imageFiles = [
-  { path: "https://loremflickr.com/320/240/guitar?lock=3", name: "Electric" },
-  { path: "https://loremflickr.com/320/240/guitar?lock=1", name: "Acoustic" },
-  { path: "https://loremflickr.com/320/240/guitar?lock=5", name: "Amplifier" },
+  { path: "./images/electric.jpg", name: "Electric" },
+  { path: "./images/acoustic.jpg", name: "Acoustic" },
+  { path: "./images/amplifier.jpg", name: "Amplifier" },
 ];
 
 const guitarList = document.getElementById("guitarList");
