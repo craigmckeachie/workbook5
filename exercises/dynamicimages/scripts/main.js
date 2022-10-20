@@ -7,6 +7,7 @@ let imageFiles = [
 ];
 
 const guitarList = document.getElementById("guitarList");
+const imagesDiv = document.querySelector("#imagesDiv");
 
 function loadGuitarList() {
   imageFiles.forEach((imageFile) => {
@@ -23,8 +24,11 @@ function addImage() {
   img.src = imageFile.path;
   img.alt = imageFile.name;
 
-  const imagesDiv = document.querySelector("#imagesDiv");
   imagesDiv.appendChild(img);
+}
+
+function clearImages() {
+  imagesDiv.innerHTML = "";
 }
 
 window.onload = () => {
@@ -32,4 +36,7 @@ window.onload = () => {
 
   const addImageButton = document.getElementById("addImageButton");
   addImageButton.onclick = addImage;
+
+  const clearImagesButton = document.getElementById("clearImagesButton");
+  clearImagesButton.onclick = clearImages;
 };
