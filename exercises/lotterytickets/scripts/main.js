@@ -18,4 +18,10 @@ window.onload = () => {
   loadWinningTicketsTable();
 };
 
-function loadWinningTicketsTable() {}
+function loadWinningTicketsTable() {
+  const winningTicketsTblBody = document.getElementById(
+    "winningTicketsTblBody"
+  );
+
+  
+}
