@@ -28,7 +28,10 @@ function addImage() {
 }
 
 function clearImages() {
-  imagesDiv.innerHTML = "";
+  // imagesDiv.innerHTML = "";
+  let imagesDiv = document.querySelector("#imagesDiv");
+  let images = document.querySelectorAll("#imagesDiv img");
+  images.forEach((image) => imagesDiv.removeChild(image));
 }
 
 window.onload = () => {
