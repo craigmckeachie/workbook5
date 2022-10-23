@@ -6,36 +6,38 @@ let imageFiles = [
   { path: "./images/amplifier.jpg", name: "Amplifier" },
 ];
 
-const guitarList = document.getElementById("guitarList");
-const imagesDiv = document.querySelector("#imagesDiv");
-
-function loadGuitarList() {
+function loadImageList() {
+  const imageList = document.getElementById("imageList");
   imageFiles.forEach((imageFile) => {
     let option = new Option(imageFile.name, imageFile.name);
-    guitarList.appendChild(option);
+    imageList.appendChild(option);
   });
 }
 
 function addImage() {
-  const selectedValue = guitarList.value;
+  const imageList = document.getElementById("imageList");
+  const selectedImageName = imageList.value;
 
-  let imageFile = imageFiles.find((f) => f.name === selectedValue);
+  let imageFile = imageFiles.find((f) => f.name === selectedImageName);
   let img = document.createElement("img");
   img.src = imageFile.path;
   img.alt = imageFile.name;
 
   imagesDiv.appendChild(img);
+  imageList.value = "";
 }
 
 function clearImages() {
-  // imagesDiv.innerHTML = "";
   let imagesDiv = document.querySelector("#imagesDiv");
+
+  // imagesDiv.innerHTML = "";
+  //OR
   let images = document.querySelectorAll("#imagesDiv img");
   images.forEach((image) => imagesDiv.removeChild(image));
 }
 
 window.onload = () => {
-  loadGuitarList();
+  loadImageList();
 
   const addImageButton = document.getElementById("addImageButton");
   addImageButton.onclick = addImage;
