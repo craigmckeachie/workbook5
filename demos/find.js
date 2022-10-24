@@ -8,6 +8,15 @@ let menu = [
 
 let searchId = 3;
 
+// let foundMenuItem;
+// for (const menuItem of menu) {
+//   if (menuItem.id === searchId) {
+//     foundMenuItem = menuItem;
+//   }
+// }
+
+// console.log(foundMenuItem);
+
 // function searchForId(menuItem) {
 //   if (menuItem.id === searchId) {
 //     return true;
@@ -16,9 +25,6 @@ let searchId = 3;
 //   }
 // }
 
-function test(menuItem) {
-  return menuItem.id === searchId;
-}
+const matchingMenuItem = menu.find((item) => item.id === searchId);
 
-const matchingMenuItem = menu.find(test);
 console.log(matchingMenuItem);

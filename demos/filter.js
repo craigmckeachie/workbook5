@@ -6,10 +6,21 @@ let menu = [
   { id: 5, item: "Coke", category: "Drink", price: 2.29 },
 ];
 
-
-function test(menuItem){
-   return menuItem.category === 'Meal' 
+foundMenuItems = [];
+for (const menuItem of menu) {
+  if (menuItem.category === "Meal") {
+    foundMenuItems.push(menuItem);
+  }
 }
 
-const matchingMenuItems = menu.filter(test)
+console.log(foundMenuItems);
+
+// function test(menuItem) {
+//   return menuItem.category === "Meal";
+// }
+
+// const matchingMenuItems = menu.filter(test);
+// console.log(matchingMenuItems);
+
+const matchingMenuItems = menu.filter((item) => item.category === "Meal");
 console.log(matchingMenuItems);
