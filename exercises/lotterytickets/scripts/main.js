@@ -39,8 +39,4 @@ function buildTicketRow(tableBody, ticket) {
 
   let cell3 = row.insertCell(2);
   cell3.innerText = ticket.expires;
-
-  //fixed bug
-  // let cell3 = row.insertCell(2);
-  // cell3.innerText = ticket.expires;
 }
