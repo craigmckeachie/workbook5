@@ -37,6 +37,6 @@ function buildTicketRow(tableBody, ticket) {
   let cell2 = row.insertCell(1);
   cell2.innerText = ticket.prize;
 
-  let cell3 = row.insertCell(2);
-  cell3.innerText = ticket.expires;
+  // let cell3 = row.insertCell(2);
+  // cell3.innerText = ticket.expires;
 }
