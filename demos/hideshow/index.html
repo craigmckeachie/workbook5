@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide/Show Element</title>
+</head>
+
+<body>
+    <input type="checkbox" id="hideShowCheckbox">Hide/Show</button>
+    <div id="mountainDetailDiv" style="display:none;">
+        <h3 id="mountainNameHeading">Moutain Name</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt illum fugiat nulla, consequatur inventore
+            commodi, iste pariatur quia suscipit ab dignissimos esse eos aliquam omnis. Possimus ullam at aliquid
+            voluptatum?</p>
+
+    </div>
+
+    <script>
+        let hideShowCheckbox = document.getElementById("hideShowCheckbox");
+        let mountainDetailDiv = document.getElementById("mountainDetailDiv");
+        let mountainNameHeading = document.getElementById("mountainNameHeading");
+
+        window.onload = () => {
+            hideShowCheckbox.onclick = hideShowMountainDetail;
+        }
+
+        function hideShowMountainDetail() {
+            if (hideShowCheckbox.checked) {
+                mountainDetailDiv.style.display = 'block'
+                // mountainNameHeading.innerText = "My Mountain Name"
+            } else {
+                mountainDetailDiv.style.display = 'none'
+            }
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>
